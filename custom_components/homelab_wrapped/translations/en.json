@@ -1,0 +1,45 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Homelab Wrapped",
+        "description": "Adds Homelab Wrapped to the sidebar. It only reads what Home Assistant already has, and nothing leaves your network."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Homelab Wrapped is already set up."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "restarts": {
+        "name": "{source} restarts"
+      },
+      "blocked": {
+        "name": "{source} blocked DNS queries"
+      },
+      "playback": {
+        "name": "{source} playback"
+      },
+      "power_cuts": {
+        "name": "{source} power cuts"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Homelab Wrapped",
+        "description": "Which meters measure your lab, and what Wrapped should leave out.",
+        "data": {
+          "lab_meters": "Lab meters",
+          "left_out": "Leave out"
+        },
+        "data_description": {
+          "lab_meters": "The energy meters (kWh) your servers are on: smart plugs, a PDU, or a UPS that measures energy. A meter that only shows watts can be turned into kWh with an Integral helper. The Power card adds them up and prices them with your Energy dashboard's price. Leave out meters for the rest of the house.",
+          "left_out": "Devices Wrapped should ignore. Useful when two integrations watch the same machine, such as Glances on your Proxmox host or System Monitor inside the Home Assistant VM, so it isn't counted twice. Also for test VMs."
+        }
+      }
+    }
+  }
+}

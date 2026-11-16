@@ -1,0 +1,4 @@
+# Built from frontend/ by `npm run build`; CI checks it matches the source.
+custom_components/homelab_wrapped/frontend/homelab-wrapped-panel.js linguist-generated=true -diff
+*.js text eol=lf
+*.ts text eol=lf

@@ -1,0 +1,45 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Homelab Wrapped",
+        "description": "Tilføjer Homelab Wrapped til sidepanelet. Den læser kun det, Home Assistant allerede har, og intet forlader dit netværk."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Homelab Wrapped er allerede sat op."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "restarts": {
+        "name": "Genstarter af {source}"
+      },
+      "blocked": {
+        "name": "{source} blokerede DNS-forespørgsler"
+      },
+      "playback": {
+        "name": "Afspilning på {source}"
+      },
+      "power_cuts": {
+        "name": "Strømafbrydelser ved {source}"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Homelab Wrapped",
+        "description": "Hvilke målere måler dit lab, og hvad Wrapped skal udelade.",
+        "data": {
+          "lab_meters": "Labbets målere",
+          "left_out": "Udelad"
+        },
+        "data_description": {
+          "lab_meters": "De energimålere (kWh), dine servere sidder på: smartstik, en PDU eller en UPS, der måler energi. En måler, der kun viser watt, kan laves om til kWh med en Integral-hjælper. Strøm-kortet lægger dem sammen og prissætter dem med prisen fra dit Energi-dashboard. Udelad målere for resten af huset.",
+          "left_out": "Enheder, Wrapped skal se bort fra. Nyttigt, når to integrationer holder øje med samme maskine, fx Glances på din Proxmox-vært eller System Monitor i Home Assistant-VM'en, så den ikke tælles to gange. Også til test-VM'er."
+        }
+      }
+    }
+  }
+}

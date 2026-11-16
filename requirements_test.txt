@@ -1,0 +1,4 @@
+# Tests, coverage and type checks against the latest Home Assistant.
+pytest-homeassistant-custom-component
+mypy
+ruff==0.17.4
