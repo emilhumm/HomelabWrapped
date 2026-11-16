@@ -3,7 +3,7 @@
 All notable changes to Homelab Wrapped. The version is the one in
 `custom_components/homelab_wrapped/manifest.json`.
 
-## [0.1.0] (unreleased)
+## [0.1.0] - 2026-11-16
 
 The first version.
 
@@ -72,3 +72,5 @@ The first version.
   has from before, a minute after Home Assistant has started, one source and one week at a time.
 - Uptime counters' own long-term statistics count back as far as Home Assistant kept them,
   stitched across a sensor whose history stopped when an integration update changed its type.
+
+[0.1.0]: https://github.com/emilhumm/HomelabWrapped/releases/tag/v0.1.0

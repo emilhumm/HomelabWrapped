@@ -2,6 +2,7 @@
   "domain": "homelab_wrapped",
   "name": "Homelab Wrapped",
   "after_dependencies": ["energy"],
+  "categories": ["computers_network.monitoring"],
   "codeowners": ["@emilhumm"],
   "config_flow": true,
   "dependencies": ["frontend", "http", "panel_custom", "recorder", "websocket_api"],
